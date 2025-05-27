@@ -19,7 +19,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Form submission handling
 const contactForm = document.querySelector('.contact-form');
 if (contactForm) {
     contactForm.addEventListener('submit', function(e) {
@@ -29,12 +28,14 @@ if (contactForm) {
 
         fetch(this.action, {
             method: "POST",
-            body: formData
+            body: formData,
+            headers: { "Accept": "application/json" } // This ensures a JSON response
         })
-        .then(response => {
-            if (response.ok) {
-                alert("Thank you for your message! I will get back to you soon.");
-                this.reset(); // Clear the form after successful submission
+        .then(response => response.json())
+        .then(data => {
+            if (data.ok) {
+                alert("Message sent successfully! Thank you for reaching out.");
+                this.reset(); // Clears the form fields
             } else {
                 alert("Something went wrong. Please try again.");
             }
@@ -44,8 +45,3 @@ if (contactForm) {
         });
     });
 }
-// Mobile menu toggle (you can add this functionality if needed)
-// const menuToggle = document.createElement('div');
-// menuToggle.classList.add('menu-toggle');
-// menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
-// document.querySelector('header .container').appendChild(menuToggle);
