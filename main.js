@@ -23,15 +23,27 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 const contactForm = document.querySelector('.contact-form');
 if (contactForm) {
     contactForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        // Here you would typically send the form data to a server
-        // For this example, we'll just show an alert
-        alert('Thank you for your message! I will get back to you soon.');
-        this.reset();
+        e.preventDefault(); // Prevent page refresh
+
+        var formData = new FormData(this);
+
+        fetch(this.action, {
+            method: "POST",
+            body: formData
+        })
+        .then(response => {
+            if (response.ok) {
+                alert("Thank you for your message! I will get back to you soon.");
+                this.reset(); // Clear the form after successful submission
+            } else {
+                alert("Something went wrong. Please try again.");
+            }
+        })
+        .catch(error => {
+            alert("Error: " + error);
+        });
     });
 }
-
 // Mobile menu toggle (you can add this functionality if needed)
 // const menuToggle = document.createElement('div');
 // menuToggle.classList.add('menu-toggle');
