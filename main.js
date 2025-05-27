@@ -18,7 +18,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
-
+//form submission handling
 const contactForm = document.querySelector('.contact-form');
 if (contactForm) {
     contactForm.addEventListener('submit', function(e) {
