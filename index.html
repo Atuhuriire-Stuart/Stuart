@@ -10,7 +10,7 @@
 <body>
     <header>
         <div class="container">
-            <div class="logo">StuWaveأصلي:</div>
+            <div class="logo">StuWave</div>
             <nav>
                 <ul>
                     <li><a href="#home">Home</a></li>
@@ -82,18 +82,18 @@
         <div class="container">
             <h2>Featured Projects</h2>
             <div class="projects-grid">
-                <!-- Project 1 -->
+                <!-- Project 1 - Eco-Cycle Game -->
                 <div class="project-card">
-                    <img src="assets/images/project1.jpg" alt="Project 1">
+                    <img src="assets/images/eco-cycle-game.jpg" alt="Eco-Cycle Recycling Game" onerror="this.src='https://via.placeholder.com/400x250/4CAF50/white?text=Eco-Cycle+Game'">
                     <div class="project-info">
-                        <h3>Project Title 1</h3>
-                        <p>Brief description of the project and technologies used.</p>
-                        <a href="https://atuhuriire-stuart.github.io/Eco-cycle-game/" class="btn">View Project</a>
+                        <h3>Eco-Cycle Recycling Game</h3>
+                        <p>An educational web game teaching proper waste sorting across 10 ecosystems. Built with HTML5, CSS3, and JavaScript.</p>
+                        <a href="https://atuhuriire-stuart.github.io/Eco-cycle-game/" target="_blank" class="btn">Play Game</a>
                     </div>
                 </div>
                 <!-- Project 2 -->
                 <div class="project-card">
-                    <img src="assets/images/project2.jpg" alt="Project 2">
+                    <img src="assets/images/project2.jpg" alt="Project 2" onerror="this.src='https://via.placeholder.com/400x250/2196F3/white?text=Project+2'">
                     <div class="project-info">
                         <h3>Project Title 2</h3>
                         <p>Brief description of the project and technologies used.</p>
@@ -115,16 +115,16 @@
                     <p><i class="fas fa-phone"></i> +256 777 632 491</p>
                     <p><i class="fas fa-map-marker-alt"></i> Kampala, Uganda</p>
                     <div class="social-links">
-                        <a href="https://github.com/Atuhuriire-Stuart"><i class="fab fa-github"></i></a>
-                        <a href="https://www.linkedin.com/in/atuhuriire-stuart-20ab3a329/"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://x.com/Atuhuriire80831"><i class="fab fa-twitter"></i></a>
+                        <a href="https://github.com/Atuhuriire-Stuart" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/atuhuriire-stuart-20ab3a329/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://x.com/Atuhuriire80831" target="_blank"><i class="fab fa-twitter"></i></a>
                         <!-- Add more social links as needed -->
                     </div>
                 </div>
                 <form class="contact-form" action="https://formspree.io/f/xqaqrpwb" method="POST">
                     <input type="text" name="name" placeholder="Your Name" required>
                     <input type="email" name="_replyto" placeholder="Your Email" required>
-                    <textarea name="message"  placeholder="Your Message" required></textarea>
+                    <textarea name="message" placeholder="Your Message" required></textarea>
                     <button type="submit" class="btn">Send Message</button>
                 </form>
             </div>
@@ -138,5 +138,9 @@
     </footer>
 
     <script src="main.js"></script>
+    <script>
+        // Simple script to update copyright year
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
