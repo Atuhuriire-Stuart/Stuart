@@ -215,7 +215,7 @@ section {
     gap: 1.5rem;
 }
 
-/* About Section */
+/* About Section & Circular Pulse Image Layout */
 .about-content {
     display: grid;
     grid-template-columns: 1fr 1.3fr;
@@ -223,24 +223,77 @@ section {
     align-items: center;
 }
 
-.about-img .img-frame {
+.profile-card-wrapper {
     position: relative;
-    border-radius: 16px;
-    overflow: hidden;
-    background: var(--bg-dark);
-    aspect-ratio: 1;
-    border: 1px solid var(--border-color);
+    width: 320px;
+    height: 320px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.about-img img {
+.circular-profile-card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid var(--accent);
+    box-shadow: 0 0 30px rgba(56, 189, 248, 0.4);
+    z-index: 3;
+    transition: var(--transition);
+    background: var(--bg-dark);
+}
+
+.circular-profile-card img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: var(--transition);
 }
 
-.about-img .img-frame:hover img {
-    transform: scale(1.05);
+.profile-card-wrapper:hover .circular-profile-card img {
+    transform: scale(1.08);
+}
+
+/* Continuous Radar Heartbeat Animation */
+.pulse-ring {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 2px solid var(--accent);
+    opacity: 0;
+    z-index: 1;
+    animation: heartbeatPulse 3s cubic-bezier(0.215, 0.610, 0.355, 1) infinite;
+}
+
+.ring-2 {
+    animation-delay: 0.4s;
+}
+
+@keyframes heartbeatPulse {
+    0% {
+        transform: scale(0.95);
+        opacity: 0;
+    }
+    10% {
+        transform: scale(1.02);
+        opacity: 0.6;
+    }
+    18% {
+        transform: scale(0.98);
+        opacity: 0.4;
+    }
+    28% {
+        transform: scale(1.15);
+        opacity: 0.8;
+    }
+    70%, 100% {
+        transform: scale(1.4);
+        opacity: 0;
+    }
 }
 
 .about-text p {
@@ -461,11 +514,7 @@ footer p {
     font-size: 0.9rem;
 }
 
-/* ==========================================================================
-   New Functionality Layouts (Scroll Highlighting & Toast Notifications)
-   ========================================================================== */
-
-/* Active Navigation link state style */
+/* Active Menu Link State Tracker Styles */
 nav a.active {
     color: var(--accent) !important;
     position: relative;
@@ -482,7 +531,7 @@ nav a.active::after {
     border-radius: 2px;
 }
 
-/* Modern Toast Notification Styling */
+/* Modern Toast Notification Containers */
 .toast-notification {
     position: fixed;
     bottom: 30px;
@@ -509,11 +558,11 @@ nav a.active::after {
 }
 
 .toast-notification.success i {
-    color: #10b981; /* Neon emerald green for success */
+    color: #10b981;
 }
 
 .toast-notification.error i {
-    color: #ef4444; /* Vivid red for error states */
+    color: #ef4444;
 }
 
 .toast-notification span {
@@ -521,9 +570,7 @@ nav a.active::after {
     font-weight: 500;
 }
 
-/* ==========================================================================
-   Responsive Breakpoints 
-   ========================================================================== */
+/* Media Breakpoints Layout Controls */
 @media (max-width: 968px) {
     .hero h1 {
         font-size: 3.2rem;
@@ -532,10 +579,6 @@ nav a.active::after {
     .contact-content {
         grid-template-columns: 1fr;
         gap: 3rem;
-    }
-    .about-img {
-        max-width: 400px;
-        margin: 0 auto;
     }
 }
 
@@ -565,5 +608,12 @@ nav a.active::after {
         left: 20px;
         right: 20px;
         bottom: 20px;
+    }
+}
+
+@media (max-width: 400px) {
+    .profile-card-wrapper {
+        width: 260px;
+        height: 260px;
     }
 }
