@@ -6,11 +6,15 @@
     <title>Atuhuriire Stuart | Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Modern Font Integration -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <div class="container">
-            <div class="logo">StuWaveأصلي</div>
+        <div class="container header-flex">
+            <div class="logo">StuWave<span>أصلي</span></div>
             <nav>
                 <ul>
                     <li><a href="#home">Home</a></li>
@@ -24,26 +28,36 @@
     </header>
 
     <section id="home" class="hero">
-        <div class="container">
+        <div class="container hero-content">
+            <span class="greeting-badge">Available for Projects</span>
             <h1>Atuhuriire Stuart</h1>
-            <h2>Software Developer | Software Engineer</h2>
+            <h2>Software Developer & Engineer</h2>
             <p>Building innovative solutions to real-world problems</p>
-            <a href="#projects" class="btn">View My Work</a>
+            <div class="hero-btns">
+                <a href="#projects" class="btn btn-primary">View My Work</a>
+                <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+            </div>
         </div>
+        <div class="hero-bg-glow"></div>
     </section>
 
     <section id="about" class="about">
         <div class="container">
-            <h2>About Me</h2>
+            <div class="section-title-wrap">
+                <span class="subtitle">Get to know me</span>
+                <h2 class="section-title">About Me</h2>
+            </div>
             <div class="about-content">
                 <div class="about-img">
-                    <img src="STUART.jpg" alt="Atuhuriire Stuart">
+                    <div class="img-frame">
+                        <img src="STUART.jpg" alt="Atuhuriire Stuart">
+                    </div>
                 </div>
                 <div class="about-text">
-                    <p>Hello! I'm Atuhuriire Stuart, a passionate software engineer based in Kampala Uganda. I specialize in mobile app development for both ios and android,web development,google cloud services,desktop application development,Ai training and many more technologies as per your request.</p>
+                    <p>Hello! I'm Atuhuriire Stuart, a passionate software engineer based in Kampala, Uganda. I specialize in mobile app development for both iOS and Android, web development, Google Cloud services, desktop application development, AI training, and many more technologies as per your request.</p>
                     <p>With 10 years of experience in the field, I've worked on diverse projects ranging from web development and mobile app development. My approach combines technical expertise with creative problem-solving to deliver high-quality solutions.</p>
-                    <p>When I'm not coding, you can find me thinking of new world problems to solve as I listen to music and I am also an enthusiastic swimmer.</p>
-                    <a href="#" class="btn">Download Resume</a>
+                    <p>When I'm not coding, you can find me thinking of new world problems to solve as I listen to music, and I am also an enthusiastic swimmer.</p>
+                    <a href="#" class="btn btn-primary download-btn"><i class="fas fa-download"></i> Download Resume</a>
                 </div>
             </div>
         </div>
@@ -51,95 +65,116 @@
 
     <section id="skills" class="skills">
         <div class="container">
-            <h2>Skills & Expertise</h2>
+            <div class="section-title-wrap">
+                <span class="subtitle">My Expertise</span>
+                <h2 class="section-title">Skills & Expertise</h2>
+            </div>
             <div class="skills-grid">
                 <div class="skill-item">
-                    <i class="fas fa-code"></i>
+                    <div class="skill-icon"><i class="fas fa-code"></i></div>
                     <h3>Web Development</h3>
                     <p>HTML, CSS, JavaScript, React, Node.js</p>
                 </div>
                 <div class="skill-item">
-                    <i class="fas fa-mobile-alt"></i>
+                    <div class="skill-icon"><i class="fas fa-mobile-alt"></i></div>
                     <h3>Mobile Development</h3>
                     <p>React Native, Flutter</p>
                 </div>
                 <div class="skill-item">
-                    <i class="fas fa-database"></i>
+                    <div class="skill-icon"><i class="fas fa-database"></i></div>
                     <h3>Database</h3>
                     <p>MySQL, MongoDB, Firebase</p>
                 </div>
                 <div class="skill-item">
-                    <i class="fas fa-cloud"></i>
+                    <div class="skill-icon"><i class="fas fa-cloud"></i></div>
                     <h3>Cloud Services</h3>
                     <p>AWS, Google Cloud, Azure</p>
                 </div>
-                <!-- Add more skills as needed -->
             </div>
         </div>
     </section>
 
     <section id="projects" class="projects">
         <div class="container">
-            <h2>Featured Projects</h2>
+            <div class="section-title-wrap">
+                <span class="subtitle">Portfolio Showcase</span>
+                <h2 class="section-title">Featured Projects</h2>
+            </div>
             <div class="projects-grid">
                 <!-- Project 1 - Eco-Cycle Game -->
                 <div class="project-card">
-                    <img src="assets/images/eco-cycle-game.jpg" alt="Eco-Cycle Recycling Game" onerror="this.src='https://via.placeholder.com/400x250/4CAF50/white?text=Eco-Cycle+Game'">
+                    <div class="project-img-container">
+                        <img src="assets/images/eco-cycle-game.jpg" alt="Eco-Cycle Recycling Game" onerror="this.src='https://via.placeholder.com/400x250/10b981/white?text=Eco-Cycle+Game'">
+                    </div>
                     <div class="project-info">
                         <h3>Eco-Cycle Recycling Game</h3>
                         <p>An educational web game teaching proper waste sorting across 10 ecosystems. Built with HTML5, CSS3, and JavaScript.</p>
-                        <a href="https://atuhuriire-stuart.github.io/Eco-cycle-game/" target="_blank" class="btn">Play Game</a>
+                        <a href="https://atuhuriire-stuart.github.io/Eco-cycle-game/" target="_blank" class="btn btn-small">Play Game <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
                 <!-- Project 2 -->
                 <div class="project-card">
-                    <img src="assets/images/project2.jpg" alt="Project 2" onerror="this.src='https://via.placeholder.com/400x250/2196F3/white?text=Project+2'">
+                    <div class="project-img-container">
+                        <img src="assets/images/project2.jpg" alt="Project 2" onerror="this.src='https://via.placeholder.com/400x250/3b82f6/white?text=Project+2'">
+                    </div>
                     <div class="project-info">
                         <h3>Project Title 2</h3>
                         <p>Brief description of the project and technologies used.</p>
-                        <a href="#" class="btn">View Project</a>
+                        <a href="#" class="btn btn-small">View Project <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
-                <!-- Add more projects as needed -->
             </div>
-            <a href="projects.html" class="btn">View All Projects</a>
+            <div class="view-all-container">
+                <a href="projects.html" class="btn btn-secondary">View All Projects</a>
+            </div>
         </div>
     </section>
 
     <section id="contact" class="contact">
         <div class="container">
-            <h2>Get In Touch</h2>
+            <div class="section-title-wrap">
+                <span class="subtitle">Let's collaborate</span>
+                <h2 class="section-title">Get In Touch</h2>
+            </div>
             <div class="contact-content">
                 <div class="contact-info">
-                    <p><i class="fas fa-envelope"></i>atuhuriirestuart@gmail.com</p>
-                    <p><i class="fas fa-phone"></i> +256 777 632 491</p>
-                    <p><i class="fas fa-map-marker-alt"></i> Kampala, Uganda</p>
+                    <h3>Contact Information</h3>
+                    <p>Have a project in mind or want to say hello? Drop a message!</p>
+                    <div class="info-links">
+                        <p><i class="fas fa-envelope"></i> atuhuriirestuart@gmail.com</p>
+                        <p><i class="fas fa-phone"></i> +256 777 632 491</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Kampala, Uganda</p>
+                    </div>
                     <div class="social-links">
-                        <a href="https://github.com/Atuhuriire-Stuart" target="_blank"><i class="fab fa-github"></i></a>
-                        <a href="https://www.linkedin.com/in/atuhuriire-stuart-20ab3a329/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://x.com/Atuhuriire80831" target="_blank"><i class="fab fa-twitter"></i></a>
-                        <!-- Add more social links as needed -->
+                        <a href="https://github.com/Atuhuriire-Stuart" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/atuhuriire-stuart-20ab3a329/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://x.com/Atuhuriire80831" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
                     </div>
                 </div>
                 <form class="contact-form" action="https://formspree.io/f/xqaqrpwb" method="POST">
-                    <input type="text" name="name" placeholder="Your Name" required>
-                    <input type="email" name="_replyto" placeholder="Your Email" required>
-                    <textarea name="message" placeholder="Your Message" required></textarea>
-                    <button type="submit" class="btn">Send Message</button>
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="_replyto" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
                 </form>
             </div>
         </div>
     </section>
 
     <footer>
-        <div class="container">
+        <div class="container footer-content">
             <p>&copy; <span id="year"></span> Atuhuriire Stuart. All rights reserved.</p>
         </div>
     </footer>
 
     <script src="main.js"></script>
     <script>
-        // Simple script to update copyright year
         document.getElementById('year').textContent = new Date().getFullYear();
     </script>
 </body>
